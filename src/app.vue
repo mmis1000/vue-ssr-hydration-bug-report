@@ -1,37 +1,19 @@
 <template>
-  <div class="logo">
-    <img alt="Vue logo" src="./assets/img/logo.png" />
-    <h3>Vue3.0 Typescript Eslint SSR Starter</h3>
-    <p class="c-#DB752D">{{ time }}</p>
-  </div>
-  <nav>
-    <router-link :to="{ name: 'index' }">Go to Home</router-link>
-    <router-link :to="{ name: 'user' }">Go to User</router-link>
-    <router-link :to="{ name: 'market' }">Go to Market</router-link>
-  </nav>
-  <hr />
-  <div class="container pt-12px pb-12px">
-    <router-view v-slot="{ Component }">
-      <Suspense>
-        <component :is="Component" />
-      </Suspense>
-    </router-view>
+  <div>
+    text
   </div>
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
   data() {
     return {
-      time: ''
     };
   },
   mounted() {
-    window.setInterval(() => {
-      this.time = new Date().toLocaleString();
-    }, 1000);
   }
 });
 </script>

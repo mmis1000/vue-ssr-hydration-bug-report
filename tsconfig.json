@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "ESNext",
+    "module": "CommonJS",
     "sourceMap": true,
     "strict": true,
-    "noUnusedLocals": true,
     "jsx": "preserve",
-    "noImplicitReturns": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "baseUrl": ".",
-    "types": ["axios", "node", "vite/client"],
+    "types": ["node", "vite/client"],
     "typeRoots": ["."],
     "paths": {
       "@/*": ["src/*"]
