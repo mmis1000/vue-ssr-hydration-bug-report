@@ -5,7 +5,7 @@ import AsyncInnerMost from './AsyncInnerMost.vue';
 export default defineComponent({
   setup () {
     return () => {
-      return <AsyncInnerMost opts={{}} />
+      return <AsyncInnerMost />
     }
   }
 })

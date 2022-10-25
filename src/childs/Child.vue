@@ -13,7 +13,7 @@ export default defineComponent({
         <div>Async { counter?.count }</div>
         <div>Async { counter?.count }</div>
         <SyncInner />
-        <AsyncInner opts={{}} />
+        <AsyncInner opts={counter?.count} />
       </>)
     }
   }
