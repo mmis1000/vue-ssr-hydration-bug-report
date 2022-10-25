@@ -1,21 +1,23 @@
 <template>
   <div>
-    text
+    <Suspense>
+      <div>
+        <ChildVue />
+      </div>
+    </Suspense>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { reactive } from "@vue/reactivity";
+import { provide, Suspense } from "vue";
+import ChildVue from "./childs/Child.vue";
+import { CounterKey } from "./provides"
+const data = reactive({
+  count: 1
+})
 
-export default defineComponent({
-  name: 'App',
-  data() {
-    return {
-    };
-  },
-  mounted() {
-  }
-});
+provide(CounterKey, data)
 </script>
 <style scoped>
 .logo {
